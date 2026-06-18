@@ -1,0 +1,74 @@
+.admin-theme {
+  --primary-gradient: linear-gradient(135deg, #8b5cf6, #a855f7); /* Purple admin gradient */
+}
+
+.admin-title {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.admin-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 1px;
+}
+
+.admin-tab {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: var(--transition);
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px; /* Pull down over the border */
+}
+
+.admin-tab:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px 8px 0 0;
+}
+
+.admin-tab.active {
+  color: var(--text-primary);
+  border-bottom-color: #a855f7; /* Purple active indicator */
+}
+
+.btn-success {
+  background: var(--success);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.btn-success:hover {
+  background: #059669;
+}
+
+.btn-danger {
+  background: var(--danger);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.btn-danger:hover {
+  background: #e11d48;
+}
+
+.btn-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+}

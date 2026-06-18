@@ -1,0 +1,73 @@
+.account-card {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: var(--transition);
+}
+
+.account-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-color: rgba(6, 182, 212, 0.3);
+}
+
+.account-card.frozen {
+  opacity: 0.8;
+  border-color: rgba(244, 63, 94, 0.3);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.account-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.account-number {
+  font-family: monospace;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+}
+
+.balance-section {
+  margin-bottom: 1rem;
+}
+
+.balance-label {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.25rem;
+}
+
+.balance-amount {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  color: var(--success);
+}
+
+.overdraft-limit {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.card-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.card-footer button {
+  flex: 1;
+  min-width: 100px;
+}

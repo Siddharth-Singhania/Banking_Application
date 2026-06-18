@@ -1,0 +1,18 @@
+package com.banking.repository;
+
+import com.banking.model.User;
+import com.banking.model.enums.UserStatus;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+import java.util.Optional;
+
+@Repository
+public interface UserRepository extends JpaRepository<User, Long> {
+    Optional<User> findByUsername(String username);
+    boolean existsByUsername(String username);
+    boolean existsByEmail(String email);
+    boolean existsByAadharNumber(String aadharNumber);
+    List<User> findByStatus(UserStatus status);
+}
