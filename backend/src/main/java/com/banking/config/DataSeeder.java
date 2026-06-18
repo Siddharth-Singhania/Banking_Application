@@ -41,7 +41,7 @@ public class DataSeeder implements CommandLineRunner {
             User admin = User.builder()
                     .username("admin")
                     .email("admin@bank.com")
-                    .aadharNumber("ADMIN_AADHAR")
+                    .aadharNumber("000000000000")
                     .password(passwordEncoder.encode("admin123"))
                     .role(Role.ADMIN)
                     .status(UserStatus.ACTIVE)
