@@ -33,8 +33,11 @@ A full-stack, enterprise-grade banking application built to simulate real-world 
 ## 💻 Local Development Setup
 
 ### 1. Database Setup
-Ensure you have MySQL installed and create a local database.
-Alternatively, the project is configured to use a remote TiDB database by passing the `SPRING_DATASOURCE_URL` environment variable.
+By default, the application connects to a remote cloud TiDB database. If you wish to run the database locally:
+1. Make sure you have **Docker** installed.
+2. In the root directory, run `docker-compose up -d` to spin up a local MySQL instance.
+3. If you prefer not to use Docker, ensure you have MySQL installed and create a database named `banking_db`.
+4. Update `backend/src/main/resources/application.properties` with your local database credentials.
 
 ### 2. Backend Setup
 Navigate to the backend directory and run the Spring Boot application:
